@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startProgramHelp from '../index';
+import startProgram from '../startProgram';
 
-startProgramHelp();
+startProgram();
