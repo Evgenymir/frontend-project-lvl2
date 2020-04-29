@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl2-bespalov",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "project Difference calculator",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "test": "jest",
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
     "eslint": "eslint",
@@ -29,6 +30,9 @@
   "bugs": {
     "url": "https://github.com/Evgenymir/frontend-project-lvl2/issues"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "homepage": "https://github.com/Evgenymir/frontend-project-lvl2#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
@@ -36,11 +40,14 @@
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.4.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.18.2",
+    "jest": "^25.4.0",
+    "jest-cli": "^25.4.0",
     "make": "^0.8.1"
   },
   "dependencies": {

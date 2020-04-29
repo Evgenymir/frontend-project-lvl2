@@ -9,3 +9,9 @@ publish:
 
 lint:
 	npm run eslint .
+
+test:
+	npm run test
+
+test-coverage:
+	npm run test -- --coverage
