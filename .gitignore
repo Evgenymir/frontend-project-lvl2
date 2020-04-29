@@ -1,5 +1,5 @@
 /node_modules/
 dist
 .vscode
-before.json
-after.json
+/before.json
+/after.json

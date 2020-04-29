@@ -7,5 +7,5 @@ const dataTwo = path.resolve(__dirname, '__fixtures__/after.json');
 const expected = fs.readFileSync(path.resolve(__dirname, '__fixtures__/expectedjson'), 'utf-8');
 
 test('makeDifference', () => {
-    expect(makeDifference(dataOne, dataTwo)).toBe(expected);
+  expect(makeDifference(dataOne, dataTwo)).toBe(expected);
 });
