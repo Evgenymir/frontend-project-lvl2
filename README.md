@@ -1,6 +1,6 @@
 # frontend-project-lvl2
 
-![Node CI](https://github.com/Evgenymir/frontend-project-lvl2/workflows/Node%20CI/badge.svg)
+[![Node CI](https://github.com/Evgenymir/frontend-project-lvl2/workflows/Node%20CI/badge.svg)](https://github.com/Evgenymir/frontend-project-lvl2/actions)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8219f5a032473ffec1d0/maintainability)](https://codeclimate.com/github/Evgenymir/frontend-project-lvl2/maintainability)
 
