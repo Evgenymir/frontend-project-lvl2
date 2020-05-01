@@ -20,3 +20,9 @@ $ sudo npm install -g frontend-project-lvl2-bespalov
 $ gendiff file1.json file2.json
 ```
 [![asciicast](https://asciinema.org/a/5XRd6VxFxgH1Fw9P6AkCr5yYM.svg)](https://asciinema.org/a/5XRd6VxFxgH1Fw9P6AkCr5yYM)
+
+### Сравнить yaml файлы
+```
+$ gendiff file1.yaml file2.yaml
+```
+[![asciicast](https://asciinema.org/a/m4oSaq25pIVNRy4EbvHz4cqhZ.svg)](https://asciinema.org/a/m4oSaq25pIVNRy4EbvHz4cqhZ)
