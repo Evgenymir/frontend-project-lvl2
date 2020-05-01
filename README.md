@@ -26,3 +26,9 @@ $ gendiff file1.json file2.json
 $ gendiff file1.yaml file2.yaml
 ```
 [![asciicast](https://asciinema.org/a/m4oSaq25pIVNRy4EbvHz4cqhZ.svg)](https://asciinema.org/a/m4oSaq25pIVNRy4EbvHz4cqhZ)
+
+### Сравнить ini файлы
+```
+$ gendiff file1.ini file2.ini
+```
+[![asciicast](https://asciinema.org/a/eFmi865kemsLxEaosaCQnyr8p.svg)](https://asciinema.org/a/eFmi865kemsLxEaosaCQnyr8p)
