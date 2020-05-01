@@ -1,18 +1,19 @@
 import fs from 'fs';
 import path from 'path';
+import parser from './parsers';
+
+const analysisFile = (filePath) => {
+  const analysisFileData = fs.readFileSync(path.resolve(filePath), 'utf-8', (error, data) => {
+    if (error) {
+      throw new Error(error);
+    }
+    return data;
+  });
+  const extnameFile = path.extname(filePath);
+  return parser(extnameFile)(analysisFileData);
+};
 
 const makeDifference = (pathOne, pathTwo) => {
-  const analysisFile = (filePath) => {
-    const analysisFileData = fs.readFileSync(path.resolve(filePath), 'utf-8', (error, data) => {
-      if (error) {
-        throw new Error(error);
-      }
-      return data;
-    });
-
-    return JSON.parse(analysisFileData);
-  };
-
   const data1 = analysisFile(pathOne);
   const data2 = analysisFile(pathTwo);
   const data1Keys = Object.keys(data1);

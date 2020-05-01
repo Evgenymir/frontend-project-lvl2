@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npm run babel-node src/bin/gendiff.js before.json after.json
+	npm run babel-node src/bin/gendiff.js before.yaml after.yaml
 
 publish:
 	npm publish --dry-run
@@ -15,5 +15,8 @@ test:
 
 test-coverage:
 	npm run test -- --coverage
+
+watch:
+	npx jest --watch
 
 .PHONY: test

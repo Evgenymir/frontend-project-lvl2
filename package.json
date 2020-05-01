@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl2-bespalov",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "project Difference calculator",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
@@ -53,6 +53,7 @@
     "make": "^0.8.1"
   },
   "dependencies": {
-    "commander": "^5.0.0"
+    "commander": "^5.0.0",
+    "js-yaml": "^3.13.1"
   }
 }

@@ -3,3 +3,5 @@ dist
 .vscode
 /before.json
 /after.json
+/before.yaml
+/after.yaml
