@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npm run babel-node src/bin/gendiff.js before.yaml after.yaml
+	npm run babel-node src/bin/gendiff.js before.ini after.ini
 
 publish:
 	npm publish --dry-run
