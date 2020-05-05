@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import parser from './parsers';
-import render from './render';
+import render from './formatters';
 
 const analysisFile = (filePath) => {
   const analysisFileData = fs.readFileSync(path.resolve(filePath), 'utf-8', (error, data) => {
@@ -14,7 +14,7 @@ const analysisFile = (filePath) => {
   return parser(extnameFile)(analysisFileData);
 };
 
-const makeDifference = (pathOne, pathTwo) => {
+const makeDifference = (pathOne, pathTwo, format) => {
   const getKeys = (dataOne, dataTwo) => {
     const data1Keys = Object.keys(dataOne);
     const data2Keys = Object.keys(dataTwo);
@@ -57,7 +57,7 @@ const makeDifference = (pathOne, pathTwo) => {
 
   const data1 = analysisFile(pathOne);
   const data2 = analysisFile(pathTwo);
-  return render(diff(data1, data2));
+  return render(diff(data1, data2), format);
 };
 
 export default makeDifference;

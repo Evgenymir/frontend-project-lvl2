@@ -5,7 +5,7 @@ const convertToString = (data, indent) => {
   return data;
 };
 
-const render = (arr) => {
+const normal = (arr) => {
   const tab = '  ';
   const stringBuilder = (data, indentCounter) => {
     const indent = tab.repeat(indentCounter);
@@ -30,4 +30,4 @@ const render = (arr) => {
   return `{\n${stringBuilder(arr, 1)}\n}`;
 };
 
-export default render;
+export default normal;
