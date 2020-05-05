@@ -38,3 +38,12 @@ $ gendiff file1.ini file2.ini
 $ gendiff file1.json file2.json
 ```
 [![asciicast](https://asciinema.org/a/ZXu7BFPzF3g9H5o1gobfMYDun.svg)](https://asciinema.org/a/ZXu7BFPzF3g9H5o1gobfMYDun)
+
+### Вывод через формат plain
+```
+$ gendiff -f plain file1.json file2.json
+или
+$ gendiff --format plain file1.json file2.json
+
+```
+[![asciicast](https://asciinema.org/a/K2KFze0snPCcDUxNvp5D1EoS9.svg)](https://asciinema.org/a/K2KFze0snPCcDUxNvp5D1EoS9)
