@@ -43,3 +43,11 @@ $ gendiff --format plain file1.json file2.json
 
 ```
 [![asciicast](https://asciinema.org/a/K2KFze0snPCcDUxNvp5D1EoS9.svg)](https://asciinema.org/a/K2KFze0snPCcDUxNvp5D1EoS9)
+
+### Вывод через формат json
+```
+$ gendiff -f json file1.json file2.json
+или
+$ gendiff --format json file1.json file2.json
+```
+[![asciicast](https://asciinema.org/a/qOHhSaqOvWZh9S9MOMQZSkMgB.svg)](https://asciinema.org/a/qOHhSaqOvWZh9S9MOMQZSkMgB)
