@@ -8,20 +8,20 @@ const convert = (value) => {
 
 const plain = (arr) => {
   const stringBuilder = (data, path) => data.map(({
-    state, name, currentData, removedData,
+    state, name, savedData, removedData,
   }) => {
-    const newOrigin = getPath(path, name);
-    if (state === 'compare' && currentData instanceof Array) {
-      return stringBuilder(currentData, newOrigin);
+    const key = getPath(path, name);
+    if (state === 'compare' && savedData instanceof Array) {
+      return stringBuilder(savedData, key);
     }
     if (state === 'removed') {
-      return `Property '${newOrigin}' was removed`;
+      return `Property '${key}' was removed`;
     }
     if (state === 'added') {
-      return `Property '${newOrigin}' was added with value: ${convert(currentData)}`;
+      return `Property '${key}' was added with value: ${convert(savedData)}`;
     }
     if (state === 'modified') {
-      return `Property '${newOrigin}' was updated. From ${convert(removedData)} to ${convert(currentData)}`;
+      return `Property '${key}' was updated. From ${convert(removedData)} to ${convert(savedData)}`;
     }
     return false;
   }).filter((item) => item).join('\n');
