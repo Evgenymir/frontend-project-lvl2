@@ -5,12 +5,7 @@ import render from './formatters';
 import genDiff from './diff';
 
 const parseFile = (filePath) => {
-  const analysisFileData = fs.readFileSync(path.resolve(filePath), 'utf-8', (error, data) => {
-    if (error) {
-      throw new Error(error);
-    }
-    return data;
-  });
+  const analysisFileData = fs.readFileSync(path.resolve(filePath), 'utf-8');
   const extnameFile = path.extname(filePath).slice(1);
   return parse(extnameFile, analysisFileData);
 };

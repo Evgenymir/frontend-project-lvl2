@@ -1,33 +1,34 @@
-const convertToString = (data, indent) => {
-  if (typeof data === 'object') {
-    return Object.entries(data).map(([key, value]) => `{\n${indent}      ${key}: ${value}\n${indent}  }`);
+const convert = (data, indent) => {
+  if (!(data instanceof Object)) {
+    return data;
   }
-  return data;
-};
 
-const normal = (arr) => {
-  const tab = '  ';
-  const stringBuilder = (data, indentCounter) => {
+  return Object.entries(data).map(([key, value]) => `{\n${indent}      ${key}: ${value}\n${indent}  }`);
+};
+const tab = '  ';
+const tabsCount = 2;
+
+const normal = (items) => {
+  const buildsString = (data, indentCounter) => {
     const indent = tab.repeat(indentCounter);
     return data.map(({
-      state, name, savedData, removedData,
+      state, name, newValue, oldValue,
     }) => {
-      if (state === 'compare' && savedData instanceof Array) {
-        return `${indent}  ${name}: {\n${stringBuilder(savedData, indentCounter + 2)}\n${indent}  }`;
+      switch (state) {
+        case 'compare':
+          return `${indent}  ${name}: {\n${buildsString(newValue, indentCounter + tabsCount)}\n${indent}  }`;
+        case 'unmodified':
+          return `${indent}  ${name}: ${convert(oldValue, indent)}`;
+        case 'removed':
+          return `${indent}- ${name}: ${convert(oldValue, indent)}`;
+        case 'added':
+          return `${indent}+ ${name}: ${convert(newValue, indent)}`;
+        default:
+          return `${indent}+ ${name}: ${convert(newValue, indent)}\n${indent}- ${name}: ${convert(oldValue, indent)}`;
       }
-      if (state === 'unmodified') {
-        return `${indent}  ${name}: ${convertToString(savedData, indent)}`;
-      }
-      if (state === 'removed') {
-        return `${indent}- ${name}: ${convertToString(removedData, indent)}`;
-      }
-      if (state === 'added') {
-        return `${indent}+ ${name}: ${convertToString(savedData, indent)}`;
-      }
-      return `${indent}+ ${name}: ${convertToString(savedData, indent)}\n${indent}- ${name}: ${convertToString(removedData, indent)}`;
     }).join('\n');
   };
-  return `{\n${stringBuilder(arr, 1)}\n}`;
+  return `{\n${buildsString(items, 1)}\n}`;
 };
 
 export default normal;

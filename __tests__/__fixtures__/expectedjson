@@ -2,55 +2,55 @@
   {
     "state": "compare",
     "name": "common",
-    "savedData": [
+    "newValue": [
       {
         "state": "unmodified",
         "name": "setting1",
-        "savedData": "Value 1"
+        "oldValue": "Value 1"
       },
       {
         "state": "removed",
         "name": "setting2",
-        "removedData": "200"
+        "oldValue": "200"
       },
       {
         "state": "modified",
         "name": "setting3",
-        "savedData": {
+        "newValue": {
           "key": "value"
         },
-        "removedData": true
+        "oldValue": true
       },
       {
         "state": "compare",
         "name": "setting6",
-        "savedData": [
+        "newValue": [
           {
             "state": "unmodified",
             "name": "key",
-            "savedData": "value"
+            "oldValue": "value"
           },
           {
             "state": "added",
             "name": "ops",
-            "savedData": "vops"
+            "newValue": "vops"
           }
         ]
       },
       {
         "state": "added",
         "name": "follow",
-        "savedData": false
+        "newValue": false
       },
       {
         "state": "added",
         "name": "setting4",
-        "savedData": "blah blah"
+        "newValue": "blah blah"
       },
       {
         "state": "added",
         "name": "setting5",
-        "savedData": {
+        "newValue": {
           "key5": "value5"
         }
       }
@@ -59,23 +59,23 @@
   {
     "state": "compare",
     "name": "group1",
-    "savedData": [
+    "newValue": [
       {
         "state": "modified",
         "name": "baz",
-        "savedData": "bars",
-        "removedData": "bas"
+        "newValue": "bars",
+        "oldValue": "bas"
       },
       {
         "state": "unmodified",
         "name": "foo",
-        "savedData": "bar"
+        "oldValue": "bar"
       },
       {
         "state": "modified",
         "name": "nest",
-        "savedData": "str",
-        "removedData": {
+        "newValue": "str",
+        "oldValue": {
           "key": "value"
         }
       }
@@ -84,14 +84,14 @@
   {
     "state": "removed",
     "name": "group2",
-    "removedData": {
+    "oldValue": {
       "abc": "12345"
     }
   },
   {
     "state": "added",
     "name": "group3",
-    "savedData": {
+    "newValue": {
       "fee": "100500"
     }
   }
