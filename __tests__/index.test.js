@@ -5,7 +5,7 @@ import makeDifference from '../src/index';
 const getFixturePath = (filename) => path.resolve(__dirname, '__fixtures__', filename);
 const getFixtureFile = (name, format) => getFixturePath(`${name}.${format}`);
 const getExpectedResult = (format) => fs.readFileSync(getFixturePath(`expected${format}`), 'utf-8');
-const formats = ['normal', 'plain', 'json'];
+const formats = ['tree', 'plain', 'json'];
 const extensions = ['json', 'yaml', 'ini'];
 
 formats.forEach((format) => {

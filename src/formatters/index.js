@@ -1,10 +1,10 @@
-import normal from './normal';
+import tree from './tree';
 import plain from './plain';
 import json from './json';
 
 const formatters = {
   plain,
-  normal,
+  tree,
   json,
 };
 

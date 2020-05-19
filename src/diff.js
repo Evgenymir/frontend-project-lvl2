@@ -1,12 +1,12 @@
 import { keys, union, has } from 'lodash';
 
 const genDiff = (dataBefore, dataAfter) => union(keys(dataBefore), keys(dataAfter)).map((key) => {
-  if (has(dataBefore, key) && !has(dataAfter, key)) {
+  if (!has(dataAfter, key)) {
     return {
       state: 'removed', name: key, oldValue: dataBefore[key],
     };
   }
-  if (has(dataAfter, key) && !has(dataBefore, key)) {
+  if (!has(dataBefore, key)) {
     return {
       state: 'added', name: key, newValue: dataAfter[key],
     };

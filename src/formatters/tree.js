@@ -8,7 +8,7 @@ const convert = (data, indent) => {
 const tab = '  ';
 const tabsCount = 2;
 
-const normal = (items) => {
+const tree = (items) => {
   const buildsString = (data, indentCounter) => {
     const indent = tab.repeat(indentCounter);
     return data.map(({
@@ -23,12 +23,14 @@ const normal = (items) => {
           return `${indent}- ${name}: ${convert(oldValue, indent)}`;
         case 'added':
           return `${indent}+ ${name}: ${convert(newValue, indent)}`;
-        default:
+        case 'modified':
           return `${indent}+ ${name}: ${convert(newValue, indent)}\n${indent}- ${name}: ${convert(oldValue, indent)}`;
+        default:
+          throw new Error(`Unknown state: ${state}`);
       }
     }).join('\n');
   };
   return `{\n${buildsString(items, 1)}\n}`;
 };
 
-export default normal;
+export default tree;

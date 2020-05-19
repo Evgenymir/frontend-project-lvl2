@@ -6,7 +6,7 @@ export default () => {
   program
     .version(packageJson.version)
     .description('Compares two configuration files and shows a difference.')
-    .option('-f, --format <type>', 'output format', 'normal')
+    .option('-f, --format <type>', 'output format', 'tree')
     .arguments('<firstConfig> <secondConfig>')
     .action((firstConfig, secondConfig) => {
       const result = makeDifference(firstConfig, secondConfig, program.format);

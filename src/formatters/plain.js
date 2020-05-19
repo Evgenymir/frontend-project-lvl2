@@ -19,8 +19,10 @@ const plain = (items) => {
         return `Property '${key}' was added with value: ${convert(newValue)}`;
       case 'modified':
         return `Property '${key}' was updated. From ${convert(oldValue)} to ${convert(newValue)}`;
-      default:
+      case 'unmodified':
         return false;
+      default:
+        throw new Error(`Unknown state: ${state}`);
     }
   }).filter((item) => item).join('\n');
   return buildsString(items, '');

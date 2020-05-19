@@ -5,6 +5,35 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/8219f5a032473ffec1d0/test_coverage)](https://codeclimate.com/github/Evgenymir/frontend-project-lvl2/test_coverage)
 [![Build Status](https://travis-ci.org/Evgenymir/frontend-project-lvl2.svg?branch=master)](https://travis-ci.org/Evgenymir/frontend-project-lvl2)
 
+Проект [frontend-project-lvl2](https://ru.hexlet.io/professions/frontend/projects/46)
+
+Ментор [Kirill Mokevnin](https://ru.hexlet.io/u/mokevnin)
+
+Поддерживаемые форматы:
+
+* json
+* yml
+* ini
+
+Вывод форматов:
+
+* plain
+* tree
+* json
+
+## Ввод команды
+
+```
+$ gendiff [options] <file1> <file2>
+```
+Опции:
+
+```
+-V, --version        output the version number
+-f, --format [type]  Output format
+-h, --help           output usage information
+```
+
 ### Установка
 ```
 $ sudo npm install -g frontend-project-lvl2-bespalov
